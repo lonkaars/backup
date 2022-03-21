@@ -1,0 +1,7 @@
+#!/bin/bash
+cd $(dirname $0)
+source ./env
+[[ -f "./pre.d/$(basename $1)" ]] && source "./pre.d/$(basename $1)"
+restic backup --files-from $1 --exclude-file exclude --tag "$(basename $1)"
+[[ -f "./post.d/$(basename $1)" ]] && source "./post.d/$(basename $1)"
+

@@ -1,0 +1,5 @@
+#!/bin/sh
+cd $(dirname $0)
+find conf.d -type f -exec ./backup {} \;
+find conf.d -type f -exec ./forget {} \;
+

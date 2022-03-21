@@ -1,0 +1,4 @@
+conf.d/*
+pre.d/*
+post.d/*
+env

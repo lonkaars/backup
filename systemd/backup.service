@@ -1,0 +1,9 @@
+[Unit]
+Description=Backup cronjob
+
+[Service]
+Type=oneshot
+ExecStart=/root/backup/run
+
+[Install]
+WantedBy=multi-user.target
